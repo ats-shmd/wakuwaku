@@ -26,15 +26,21 @@ for (var i = 0; i < imgList.length; i++) {
 
 // スライドの数を取得（後の処理のため-1）
 var length = imgList.length - 1;
+
 var imageSlide = document.getElementsByClassName("slider-inner")[0].getElementsByTagName("li");
+
 var dotNavigation = document.getElementsByClassName("nav")[0].getElementsByTagName("li");
+
 // 「現在◯枚目の画像を表示している」というインデックス番号を格納する変数
 var nowIndex = 0;
+
 // 現在表示されている画像とドットナビにクラスを追加する
 imageSlide[nowIndex].classList.add("show");
 dotNavigation[nowIndex].classList.add("current");
+
 // スライドがアニメーション中か判断するフラグ
 var isChanging = false;
+
 // スライドのsetTimeoutを管理するタイマー
 var slideTimer;
 
@@ -44,13 +50,17 @@ function sliderSlide(val) {
     return false;
   }
   isChanging = true;
+
   // 現在表示している画像とドットナビからクラスを削除
   imageSlide[nowIndex].classList.remove("show");
   dotNavigation[nowIndex].classList.remove("current");
+
   nowIndex = val;
+
   // 次に表示する画像とドットナビにクラスを追加
   imageSlide[nowIndex].classList.add("show");
   dotNavigation[nowIndex].classList.add("current");
+
   // アニメーションが終わるタイミングでisChangingのステータスをfalseに。cssと全く同じ600ミリ秒にセットで大丈夫なのかなぁ。
   slideTimer = setTimeout(function() {
     isChanging = false;
