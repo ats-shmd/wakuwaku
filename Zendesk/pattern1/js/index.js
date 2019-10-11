@@ -5,7 +5,7 @@ var headingList = [
   "カスタマーサービスの質があっという間に向上"
 ];
 // スライドに表示するテキスト
-var textList = [
+var sentenceList = [
   "Zendeskのカスタマーサービスおよびエンゲージメント分野の製品は、高性能で柔軟性に優れ、あらゆるビジネスのニーズに対応できる拡張性を備えています。",
   "Zendeskは、あらゆる業務や規模に対応できるカスタマーサービスプラットフォームです。今日のお客様が求めるサポート体制を構築し、お客様の関係を強化しませんか？",
   "電話からのお問い合わせも、チャットからのお問い合わせも、全てひとつの画面で管理。カスタマーサービス業務が劇的にスムーズになります。"
@@ -23,17 +23,17 @@ for (var i = 0; i < headingList.length; i++) {
   var slide = document.createElement("div");
   slide.className = "content";
   // コンテンツ-文章の要素を追加
-  var article = document.createElement("div");
-  article.className = "article";
-  // article要素の中に見出し、テキストを埋め込む
+  var text = document.createElement("div");
+  text.className = "text";
+  // text要素の中に見出し、テキストを埋め込む
   var heading = document.createElement("p");
   heading.appendChild(document.createTextNode(headingList[i]));
   heading.className = "heading";
-  var text = document.createElement("p");
-  text.appendChild(document.createTextNode(textList[i]));
-  text.className = "text";
-  article.appendChild(heading);
-  article.appendChild(text);
+  var sentence = document.createElement("p");
+  sentence.appendChild(document.createTextNode(sentenceList[i]));
+  sentence.className = "sentence";
+  text.appendChild(heading);
+  text.appendChild(sentence);
 
   // コンテンツ-画像の要素を追加
   var image = document.createElement("div");
@@ -41,7 +41,7 @@ for (var i = 0; i < headingList.length; i++) {
   image.innerHTML = "<img src='" + imgList[i] + "'>";
   
   // コンテンツ要素に文章と画像を埋め込む
-  slide.appendChild(article);
+  slide.appendChild(text);
   slide.appendChild(image);
   document.getElementsByClassName("slider-inner")[0].appendChild(slide);
 
