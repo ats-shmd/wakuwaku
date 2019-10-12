@@ -17,15 +17,15 @@ var imgList = [
   "images/conclusion.svg"
 ];
 
-// コンテンツとドットナビの要素を自動で追加
+// スライドとドットナビの要素を自動で追加
 for (var i = 0; i < headingList.length; i++) {
-  // コンテンツの要素を追加
+  // スライドの要素を追加
   var slide = document.createElement("div");
   slide.className = "content";
-  // コンテンツ-文章の要素を追加
+  // スライド-文字の要素を追加
   var text = document.createElement("div");
   text.className = "text";
-  // text要素の中に見出し、テキストを埋め込む
+  // 文字要素の中に見出し、テキストを埋め込む
   var heading = document.createElement("p");
   heading.appendChild(document.createTextNode(headingList[i]));
   heading.className = "heading";
@@ -35,12 +35,12 @@ for (var i = 0; i < headingList.length; i++) {
   text.appendChild(heading);
   text.appendChild(sentence);
 
-  // コンテンツ-画像の要素を追加
+  // スライド-画像の要素を追加
   var image = document.createElement("div");
   image.className = "image";
   image.innerHTML = "<img src='" + imgList[i] + "'>";
   
-  // コンテンツ要素に文章と画像を埋め込む
+  // スライド要素に文字と画像を埋め込む
   slide.appendChild(text);
   slide.appendChild(image);
   document.getElementsByClassName("slider-inner")[0].appendChild(slide);
@@ -91,7 +91,7 @@ function sliderSlide(val) {
 
   sliderTimer = setTimeout(function() {
     isChanging = false;
-  }, 600);
+  }, 300);
 }
 
 // ドットナビ押下時のイベント
