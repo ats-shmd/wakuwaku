@@ -11,14 +11,23 @@
 <body>
 <header>
   <img class="logo" src="images/Layer2.svg" alt="押下するとホーム画面へ遷移（今回は未実装）">
-  <img class="humbuger-menu" src="images/iconfinder_menu-alt_134216.svg" alt="押下するとメニュー一覧を表示">
+  <img class="humbuger-menu open" src="images/iconfinder_menu-alt_134216.svg" alt="押下するとメニュー一覧を表示">
 </header>
-<div class="slider-container">  
+<div class="slider-container">
+  <nav id="global-navi">
+    <ul class="menu">
+      <li>HOME</li>
+      <li>ABOUT</li>
+      <li>SERVICE</li>
+      <li>CONTACT</li>
+    </ul>
+  </nav>
   <div class="slider">
     <div class="slider-inner"></div>
     <ul class="nav"></ul>
   </div>
 </div>
+<script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/index.js"></script>
 </body>
 </html>

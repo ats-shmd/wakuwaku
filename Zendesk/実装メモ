@@ -107,6 +107,13 @@ Widthを指定した上でmarginを使って指定する
 イージング：イーズアウトは、ゆっくりと動き出し徐々に加速する動き
 参考　https://blogs.adobe.com/japan/web-xd-ui-transition-easing/
 
+表示非表示の切り替え
+やり方いろいろあるけど何が一般的なんだろう。
+・styleのdisplayで切り替え
+・classの追加削除で切り替え
+とかの切り替え
+
+
 
 
 

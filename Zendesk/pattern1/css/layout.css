@@ -22,7 +22,8 @@ header {
 .humbuger-menu {
   position: absolute;
   top: 25px;
-  right: 33px
+  right: 33px;
+  cursor: pointer;
 }
 
 .slider-container {
@@ -32,6 +33,30 @@ header {
   width: 100%;
   height: 100%;
   background: #F9EECF
+}
+
+#global-navi {
+  position: absolute;
+  top: 0px;
+  right: 33px;
+  width: 181px;
+  height: 246px;
+  background: #FFF;
+  border: 3px solid #644A00;
+  opacity: 0;
+  z-index: 2;
+  transition: all 300ms ease-in-out
+}
+
+#global-navi li {
+  margin-top: 35px;
+  margin-left: 23px;
+  text-align: left;
+  font-size: 18px;
+  font-family: "ヒラギノ角ゴ Pro";
+  font-weight: 600;
+  letter-spacing: 0;
+  color: #644A00
 }
 
 .slider {

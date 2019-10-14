@@ -22,6 +22,7 @@ for (var i = 0; i < headingList.length; i++) {
   // スライドの要素を追加
   var slide = document.createElement("div");
   slide.className = "content";
+
   // スライド-文字の要素を追加
   var text = document.createElement("div");
   text.className = "text";
@@ -101,3 +102,21 @@ for (var i = 0; i < dotNavigation.length; i++) {
     sliderSlide(index);
   }, false);
 }
+
+// メニューボタンの表示切り替え
+$(function() {
+  var opacityNo = "0";
+  $(".humbuger-menu").on("click", function() {
+    if($(this).hasClass("open")) {
+      opacityNo = "1";
+      $(this).removeClass("open");
+    } else {
+      opacityNo = "0";
+      $(this).addClass("open");
+    }
+
+    $("#global-navi").stop().animate({
+      'opacity' : opacityNo
+    }, 300);
+  });
+});
